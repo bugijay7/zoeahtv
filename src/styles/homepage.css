@@ -1,0 +1,31 @@
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.homepage-container {
+    animation: slideInFromRight 1.8s ease-out;
+    opacity: 1;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0; /* Content starts invisible */
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1; /* Content ends fully visible */
+    }
+}
+
+.homepage-container {
+    animation: slideInFromRight 0.8s ease-out; /* Adjust the timing to your liking */
+    opacity: 1;
+}

@@ -1,0 +1,16 @@
+
+@keyframes slideUpFromBottom {
+    from {
+        transform: translateY(100%); /* Start below the screen */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* Slide into normal position */
+        opacity: 1; /* Fade in fully visible */
+    }
+}
+
+.contactpage-container {
+    animation: slideUpFromBottom 1.2s ease-out; /* Slower animation duration (1.2s) */
+    opacity: 1;
+}

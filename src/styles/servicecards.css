@@ -1,0 +1,165 @@
+.servicecards-container {
+    padding: 40px;
+    text-align: center;
+    background-color: black; /* Light background for the section */
+}
+
+.servicecards h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-family: 'Arial Black', sans-serif;
+}
+.servicecards h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.servicecards h2 svg {
+    margin-right: 10px;
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #ffe135; /* Icon color */
+}
+
+
+.servicecards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.servicecard {
+    background: linear-gradient(135deg, #555336, #dc6b14);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+
+.servicecard h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.servicecard p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fdfdfd;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Adding animations and effects */
+.servicecard::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    transform: rotate(45deg);
+    transition: opacity 0.3s;
+}
+
+.servicecard:hover::before {
+    opacity: 0.4;
+}
+
+.servicecard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Animation for each service card */
+@keyframes pop-in {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.servicecard {
+    animation: pop-in 0.4s ease forwards;
+}
+
+/* Adding a neon-style border */
+.servicecard {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+.servicecard h2, .servicecard p {
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .servicecards-container {
+        padding: 20px;
+text-align: left;
+    }
+
+    .servicecards h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .servicecards h2 {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .servicecards {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        gap: 15px;
+    }
+
+    .servicecard {
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .servicecard h2 {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .servicecard p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    /* Adjust neon-style border and box-shadow for mobile */
+    .servicecard {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 2px 10px rgba(255, 105, 180, 0.3);
+    }
+
+    .servicecard:hover {
+        transform: translateY(-5px); /* Reduced hover effect for smaller screens */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Simplify before pseudo-element on hover for mobile */
+    .servicecard::before {
+        width: 150%;
+        height: 150%;
+    }
+
+    .servicecard:hover::before {
+        opacity: 0.3;
+    }
+}

@@ -1,0 +1,134 @@
+/* Navbar-container */
+.Navbar-container {
+    background-color: var(--color-blog); /* Dark background color */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Center the nav */
+    align-items: flex-end;
+}
+
+/* Nav styling */
+.Navbar-container nav {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+/* Link styling */
+.Navbar-container nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    border-radius: 5px;
+}
+.Navbar-container nav p {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    border-radius: 5px;
+}
+/* Hover effect */
+.Navbar-container nav a:hover,  .Navbar-container nav p:hover {
+    background-color: #555; /* Lighter shade on hover */
+    color: #f1f1f1;
+}
+
+/* Active link styling (optional) */
+.Navbar-container nav a.active, .Navbar-container nav p:active {
+    background-color: #666; /* Different shade for active link */
+    color: white;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--color-text);
+}
+strong {
+    color: var(--color-bg);
+}
+/* Creative Shortcuts Styling */
+.creative-shortcuts {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.shortcut-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid var(--color-blog);
+    border-radius: 10px;
+    width: 100px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shortcut-item:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-blog);
+    color: white;
+}
+
+.shortcut-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--color-blog);
+    transition: color 0.3s ease;
+}
+
+.shortcut-item:hover .shortcut-icon {
+    color: white;
+}
+
+.shortcut-item p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* General mobile styles */
+@media (max-width: 768px) {
+
+    /* Navbar-container */
+    .Navbar-container {
+       display: flex;
+       flex-direction: column-reverse;
+       align-items: center;
+
+    }
+
+    .Navbar-container nav {
+        gap: 5px; /* Reduce space between links */
+    }
+
+    .Navbar-container nav a, .Navbar-container nav p {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Smaller logo text size */
+margin-bottom: 0;
+    }
+
+  .creative-shortcuts {
+    display: none !important;
+}
+
+.logo {
+margin-bottom: -20px;
+font-size: 1rem;}
+
+
+}
